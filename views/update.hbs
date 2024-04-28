@@ -1,0 +1,25 @@
+<div class="conatiner d-flex justify-content-center align-items-center mt-4">
+    <form action="/update/{{note.id}}" method="post" class="bg-light border-secondary-subtle border p-4"
+        style="width: 800px;">
+        <div class="errors">
+            {{#each errors}}
+            <p class="bg-danger fs-5 p-1" style="color: #fff;"> {{ text }} <button class="btn-close"> </button> </p>
+            {{/each}}
+        </div>
+
+        <label for="updTitle" class="form-label fs-5"> Напишите новый заголовок </label>
+        <input type="text" id="updTitle" name="updTitle" placeholder="Сделать уборку" class="form-control "
+            value="{{ note.title }}">
+
+        <label for="updContent" class="form-label fs-5 mt-4"> Напишите новое описание </label>
+        <input type="text" id="updContent" name="updContent" class="form-control" placeholder="Убраться в комнате"
+            value="{{ note.content }}">
+
+        <input type="submit" class="form-control btn btn-primary mt-4" value="Создать">
+    </form>
+
+
+    {{!-- <label for="id" class="form-label fs-5"> Напишите в нижнюю строчку это число: {{ id }} </label>
+    <input type="number" id="id" name="id" class="form-control" placeholder="1" value={{ id }}> --}}
+
+</div>

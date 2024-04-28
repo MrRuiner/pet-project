@@ -1,0 +1,19 @@
+<div class="conatiner d-flex justify-content-center align-items-center mt-4">
+
+    <form action="/add" method="post" class="bg-light border-secondary-subtle border p-4" style="width: 800px;">
+        <div class="errors">
+            {{#each errors}}
+                <p class="bg-danger fs-5 p-1" style="color: #fff;"> {{text}} <button class="btn-close">  </button> </p>
+            {{/each}}
+        </div>
+
+        <label for="addTitle" class="form-label fs-5"> Напишите заголовок </label>
+        <input type="text" id="addTitle" name="title" placeholder="Сделать Д?З" class="form-control " value={{ title }}>
+
+        <label for="addContent" class="form-label fs-5 mt-4"> Напишите что-нибудь </label>
+        <input type="text" id="addContent" name="content" class="form-control" placeholder="Нужно сделать домашку по Ангийскому" value={{ content }}>
+
+        <input type="submit" class="form-control btn btn-primary mt-4" value="Создать">
+    </form>
+
+</div>
